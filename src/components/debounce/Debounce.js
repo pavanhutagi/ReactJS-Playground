@@ -17,9 +17,9 @@ function Debounce() {
     let debounceTimer;
     return function () {
       const context = this;
-      const args = arguments;
+      const params = arguments;
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => func.apply(context, args), delay);
+      debounceTimer = setTimeout(() => func.apply(context, params), delay);
     };
   };
 
